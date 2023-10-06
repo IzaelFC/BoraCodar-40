@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <title>BoraCodar - 40</title>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                screens : {
+                    lg : '850px',
+                    sm : '520px'
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        :root {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        h2 {
+            @apply sm:text-lg text-base font-bold
+        }
+
+        p {
+            @apply lg:text-sm text-xs
+        }
+
+        .icon {
+            @apply flex lg:w-12 lg:h-12 w-10 h-10 lg:p-3 p-2 bg-gradient-to-b from-[#202024] to-[#121214] border border-[#323238] rounded
+        }
+
+        .items {
+            @apply space-y-3
+        }
+    </style>
+</head>
+
+<body class="flex w-screen sm:h-screen bg-[#09090A] text-white items-center justify-center">
+    <img class="absolute sm:w-[50vw] w-screen h-screen object-fill right-0 -z-10" src="assets/images/BG.png" alt="">
+    <main class="flex flex-col lg:p-10 p-5 lg:space-y-20 space-y-10">
+        <section class="lg:space-y-5 space-y-3">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#996DFF] to-[#C7AFFF]">newsletter exclusiva</span>
+            <h1 class="lg:text-5xl text-3xl font-bold">Workspace inspiration</h1>
+            <p class="lg:w-[40%] w-[70%] lg:text-xl text-base text-[#C4C4CC]">Assine nossa newsletter e transforme seu espaço de trabalho em um oásis de produtividade!</p>
+            
+            <form class="sm:flex gap-5 sm:space-y-0 space-y-2">
+                <div class="sm:w-[40%] w-full p-[1px] rounded focus-within:bg-gradient-to-r focus-within:to-[#C7AFFF] focus-within:from-[#996DFF] transition-all duration-300 bg-transparent">
+                    <input class="w-full h-full p-4 bg-[#202024] text-[#C4C4CC] rounded outline-none" type="email" placeholder="Digite seu e-mail" required >
+                </div>
+                <button class="flex sm:w-auto w-full my-auto justify-center sm:p-4 p-3 bg-gradient-to-l to-[#996DFF] from-[#C7AFFF] text-black font-bold uppercase rounded">Quero receber <img class="my-auto ml-2" src="assets/icons/seta.png" alt=""></button>
+            </form>
+        </section>
+
+        <section class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5">
+            <div class="items">
+                <img class="icon" src="assets/icons/foguete.png" alt="">
+                <h2>As últimas inovações</h2>
+                <p>Mantenha-se atualizado com as mais recentes tecnologias e acessórios que vão revolucionar a forma como você trabalha.</p>
+            </div>
+
+            <div class="items">
+                <img class="icon" src="assets/icons/raio.png" alt="">
+                <h2>Reviews detalhadas</h2>
+                <p>Analisamos os produtos mais populares do mercado para que você possa fazer as escolhas certas.</p>
+            </div>
+
+            <div class="items">
+                <img class="icon" src="assets/icons/ferramenta.png" alt="">
+                <h2>Dicas de organização</h2>
+                <p>Aumente sua eficiência e proteja sua saúde com conselhos especializados sobre ergonomia e organização.</p>
+            </div>
+
+            <div class="items">
+                <img class="icon" src="assets/icons/presente.png" alt="">
+                <h2>Ofertas exclusivas</h2>
+                <p>Como membro da nossa comunidade, você terá acesso a descontos e promoções especiais em produtos selecionados.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
